@@ -1,0 +1,23 @@
+# Binarios y objetos
+bin/
+*.o
+*.a
+*.so
+*.dylib
+*.exe
+
+# Datos (se generan en ejecución)
+data/*.txt
+!data/.gitkeep
+
+# Editor y IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+
+# Compilación
+*.out
+*.log
