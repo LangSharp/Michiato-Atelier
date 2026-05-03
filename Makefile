@@ -5,6 +5,7 @@ LDFLAGS =
 SRC_DIR = src/src
 INCLUDE_DIR = src/include
 BIN_DIR = bin
+DATA_DIR = data
 
 MAIN_SRC = src/main.c
 SRCS = $(wildcard $(SRC_DIR)/*.c)
@@ -21,7 +22,7 @@ TEST_TARGET = $(BIN_DIR)/test_michiato
 all: dirs $(TARGET)
 
 dirs:
-	@mkdir -p $(BIN_DIR)
+	@mkdir -p $(BIN_DIR) $(DATA_DIR)
 
 $(TARGET): $(OBJS) $(MAIN_OBJ)
 	$(CC) $(CFLAGS) -o $@ $^ $(LDFLAGS)

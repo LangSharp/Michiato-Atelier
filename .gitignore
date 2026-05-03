@@ -5,6 +5,7 @@ bin/
 *.so
 *.dylib
 *.exe
+tests/
 test*
 
 # Datos (se generan en ejecución)

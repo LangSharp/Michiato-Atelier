@@ -6,6 +6,8 @@ CLI para gestión de bazar - Inventario, ventas y tickets.
 
 ## Autor
 Luis Armando Fernandez Chavez
+Ximena Vargas Morales
+Erick Alberto Garcia Perez
 
 ## Licencia
 GPL v3 - Ver archivo LICENSE
@@ -60,10 +62,8 @@ TOTAL:                    $380.00
 - **sequences.txt**: `next_inventory_id:next_ticket_id`
 
 ## Características
-- Almacenamiento persistente en archivos de texto (separados por ":")
+- Almacenamiento persistente en archivos de texto 
 - IDs autoincrementales con persistencia en disco
 - Validación de stock en ventas
 - Registro de cliente requerido para ventas
 - Resumen de ingresos/egresos
-- Testing automatizado con `make test`
-- Interfaz CLI con ASCII art personalizado
