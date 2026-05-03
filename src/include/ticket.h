@@ -4,6 +4,7 @@
 #include "utils.h"
 
 #define MAX_ITEMS 4
+#define TICKETS_FILE "data/tickets.txt"
 
 typedef struct {
     int product_id;

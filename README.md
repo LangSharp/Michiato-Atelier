@@ -2,7 +2,7 @@
 
 CLI para gestión de bazar - Inventario, ventas y tickets.
 
-**Nota**: Todos los datos se almacenan en memoria RAM (temporales, se pierden al cerrar el programa).
+**Nota**: Los datos se almacenan en archivos de texto plano (data/inventory.txt, data/tickets.txt).
 
 ## Autor
 Luis Armando Fernandez Chavez
@@ -54,13 +54,16 @@ TOTAL:                    $380.00
       Gracias por su compra!
 ```
 
+## Formato de Datos
+- **inventory.txt**: `id:name:description:price:quantity`
+- **tickets.txt**: `id:date:type:customer_name:total:item_count:items...`
+- **sequences.txt**: `next_inventory_id:next_ticket_id`
+
 ## Características
-- Almacenamiento 100% en memoria RAM (sin archivos)
-- IDs autoincrementales que se mantienen entre operaciones
+- Almacenamiento persistente en archivos de texto (separados por ":")
+- IDs autoincrementales con persistencia en disco
 - Validación de stock en ventas
-- Resumen de ingresos/egresos
-- Estructuras de datos:
-  - Listas (arrays) para inventario y tickets
-  - Stacks para gestión de items de ticket
 - Registro de cliente requerido para ventas
+- Resumen de ingresos/egresos
 - Testing automatizado con `make test`
+- Interfaz CLI con ASCII art personalizado

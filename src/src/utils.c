@@ -26,7 +26,9 @@ void utils_get_current_date(char *date_buffer) {
     time_t now = time(NULL);
     struct tm *tm_info = localtime(&now);
     snprintf(date_buffer, DATE_FORMAT_LEN, "%02d%02d%02d",
-             tm_info->tm_mday, tm_info->tm_mon + 1, tm_info->tm_year % 100);
+             (unsigned int)tm_info->tm_mday,
+             (unsigned int)(tm_info->tm_mon + 1),
+             (unsigned int)(tm_info->tm_year % 100));
 }
 
 int utils_get_int_input(const char *prompt) {
